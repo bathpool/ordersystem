@@ -1,0 +1,217 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0 auto;
+    width: 600px;
+    font-family: Smythe;
+    font-weight: 400;
+} 
+
+header {
+    background-image: url("/imgs/845364ecacaeaea44c5e3a8cd7159c5d52f26662.jpg");
+    background-size: cover;
+    background-position: 0px 248px;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 10px;
+    padding-left: 46px;
+    padding-top: 46px;
+    padding-bottom: 70px;
+    }
+
+.first-header {
+    font-size: 39px;
+}
+
+.second-header {
+    font-size: 22px;
+}
+
+.menu-section {
+    padding-top: 22px;
+}
+.menu-item {
+    width: 508px;
+    height: 140px;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #D2D2D2;
+    margin-top: 45px;
+    margin-bottom: 45px;
+}
+
+.menu-left {
+    display: flex;
+}
+
+.menu-emoji {
+    font-size: 79px;
+}
+
+.menu-name {
+    font-size: 28px;
+    color: #000000;
+    margin-bottom: 5px;
+}
+
+.menu-ingredients {
+    font-size: 16px;
+    color: #8B8B8B;
+    margin-bottom: 5px;
+}
+
+.menu-price {
+    font-size: 20px;
+    color: #000000;
+}
+
+.menu-btn {
+    color: #3C3C3C;
+    font-family: Inter;
+    font-weight: 200;
+    font-size: 32px;
+    width: 50px;
+    height: 50px;
+    border: 1.5px solid #DEDEDE;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.checkout-section {
+    width: 508px;
+    text-align: center;
+    display: block;
+}
+
+.checkout-items {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.remove-btn {
+    font-size: 12px;
+    color: #8B8B8B;
+}
+
+.checkout-price {
+    border-top: 2px solid #393333;
+    display: flex;
+    justify-content: space-between;
+    padding-top: 10px;
+}
+
+.checkout-btn {
+    height: 60px;
+    background-color: #16DB99;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 16px;
+    margin-top: 50px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.payment-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center; /* Center horizontally */
+    align-items: center; /* Center vertically */
+    z-index: 9999; /* Ensure it's on top of other content */
+}
+
+.payment-section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 524px;
+    height: 542px;
+    background-color: white;
+    border: 1.3px solid #757575;
+    border-radius: 4px;
+    box-shadow: 5px 5px 255px 0px #00000080;
+    text-align: center;  
+    padding: 24px;
+    
+}
+
+.payment-title {
+    font-family: Verdana;
+    font-weight: 700;
+    font-style: Bold;
+    font-size: 24px;
+    margin-top: 23px;
+    margin-bottom: 56px;
+}
+
+.payment-card {
+    width: 100%;
+    height: 71px;
+    margin-bottom: 23px;
+    color: black;
+    border: 1px solid #757575;
+    border-radius: 4px;
+    font-family: Verdana;
+    font-weight: 400;
+    font-style: Regular;
+    font-size: 20px;    
+    padding-left: 27px;  
+}
+
+.payment-card::placeholder {
+    color: #757575;
+}
+
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+.payment-confirm {
+    margin-top: 46px;
+    margin-bottom: 7px;
+    background-color: #16DB99;
+    color: white;
+    width: 100%;
+    height: 71px;
+    font-family: Verdana;
+    font-weight: 700;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 4px;
+    border: 0;
+}
+
+.complete-section {
+    width: 504px;
+    height: 120px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+    color: #065F46;
+    background-color: #ECFDF5;
+}
+
+.disappear {
+    display: none;
+}

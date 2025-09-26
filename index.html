@@ -1,0 +1,44 @@
+<html>
+    <head>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Smythe&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <header>
+            <p class="first-header">Jimmy's Diner</p>
+            <p class="second-header">The best burgers and pizzas in town.</p>            
+        </header>
+        <div class="menu-section" id="menu-section">
+        </div>
+        <div class="checkout-section" id="checkout-section">
+        </div>
+        <div class="payment-overlay disappear" id="payment-overlay">
+            <div class="payment-section" id="payment-section">
+                <div class="payment-title">Enter card details</div>
+                <form>
+                    <input class="payment-card" 
+                        placeholder="Enter your name" 
+                        type="text" 
+                        minlength="1"
+                        maxlength="50"
+                        required>
+                    <input class="payment-card" 
+                        placeholder="Enter card number" 
+                        type="number" 
+                        required>
+                    <input class="payment-card" 
+                        placeholder="Enter CVV" 
+                        type="number" 
+                        required>
+                    <input type="submit" class="payment-confirm" data-pay="pay" value="Pay">
+                </form>
+            </div>
+        </div>
+        <div class="complete-section disappear" id="complete-section">
+        </div>
+	    <script src="index.js" type="module"></script>
+    </body>
+</html>
+
