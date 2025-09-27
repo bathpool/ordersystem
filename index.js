@@ -62,7 +62,8 @@ function renderMenu() {
                     </div>
                 </div>
                 <div class="menu-btn" data-id="${menu.id}">+</div>
-            </div>`        
+            </div>
+        `        
     })
     menuSection.innerHTML = menuHtml
 
@@ -88,17 +89,17 @@ function renderCheckout() {
                     </div>
                     <div class="menu-price">$${menu.price * orderItems[i]}</div>
                 </div>
-                `       
+            `       
         }
         })
     
     checkoutHtml += `
-            <div class="checkout-price">
-                <div class="menu-name">Total price:</div>
-                <div class="menu-price">${totalPrice}</div>
-            </div>
-            <div class="checkout-btn" data-submit="complete-order">Complete order</div>
-            `
+        <div class="checkout-price">
+            <div class="menu-name">Total price:</div>
+            <div class="menu-price">${totalPrice}</div>
+        </div>
+        <div class="checkout-btn" data-submit="complete-order">Complete order</div>
+    `
     checkoutSection.innerHTML = checkoutHtml
     
 }
