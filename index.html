@@ -17,20 +17,23 @@
         <div class="payment-overlay disappear" id="payment-overlay">
             <div class="payment-section" id="payment-section">
                 <div class="payment-title">Enter card details</div>
-                <form>
+                <form class="payment-form" id="payment-form">
                     <input class="payment-card" 
                         placeholder="Enter your name" 
                         type="text" 
                         minlength="1"
                         maxlength="50"
+                        name="name"
                         required>
                     <input class="payment-card" 
                         placeholder="Enter card number" 
                         type="number" 
+                        name="cardNumber"
                         required>
                     <input class="payment-card" 
                         placeholder="Enter CVV" 
                         type="number" 
+                        name="cvv"
                         required>
                     <input type="submit" class="payment-confirm" data-pay="pay" value="Pay">
                 </form>

@@ -4,9 +4,12 @@ const menuSection = document.getElementById("menu-section")
 const checkoutSection = document.getElementById("checkout-section")
 const paymentOverlay = document.getElementById("payment-overlay")
 const completeSection = document.getElementById("complete-section")
-const paymentInfo = Array.from(document.getElementsByClassName("payment-card"))
+const paymentInfo = {
+    name: "",
+    cardNumber: "",
+    cvv: ""
+}
 const orderItems = []
-const cardInfo = []
 
 
 renderMenu()
@@ -25,27 +28,29 @@ document.addEventListener("click", function(e){
         checkoutSection.classList.add("disappear")
         paymentOverlay.classList.remove("disappear")
     } else if (e.target.dataset.pay) {
-        paymentOverlay.classList.add("disappear")
-        checkoutSection.classList.add("disappear")
-        saveCard()
-        renderComplete()
-        initializeItem()
+        checkoutPayment()
     }
 })
 
-function saveCard() {
-    paymentInfo.forEach(input => {
-        cardInfo.push(input.value)
-        console.log(input.required)
-        })
+function checkoutPayment() {
+    const paymentForm = document.getElementById("payment-form")
+    const paymentObj = new FormData(paymentForm)
+    paymentInfo.name = paymentObj.get("name")
+    paymentInfo.cardNumber = paymentObj.get("cardNumber")
+    paymentInfo.cvv = paymentObj.get("cvv") 
     
+    paymentOverlay.classList.add("disappear")
+    checkoutSection.classList.add("disappear")
+    renderComplete()
+    initializeItem()
+    paymentForm.reset()
+
 }
+
 
 function initializeItem() {
     orderItems.length = 0
-    paymentInfo.forEach(input => input.value = "")
     menuArray.forEach(menu => orderItems.push(0))
-    cardInfo.length = 0
 }
 
 function renderMenu() {
@@ -114,5 +119,5 @@ function orderNumber(number) {
 
 function renderComplete() {
     completeSection.classList.remove("disappear")
-    completeSection.innerHTML = `<p>Thanks, ${cardInfo[0]}! Your order is on its way!</p>`
-}
+    completeSection.innerHTML = `<p>Thanks, ${paymentInfo.name}! Your order is on its way!</p>`
+}   
